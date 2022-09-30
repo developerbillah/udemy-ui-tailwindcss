@@ -3,3 +3,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.course_title{
+    @apply text-lg font-DMSans font-bold leading-5 block line-clamp-2 hover:text-purple-900 transition-all
+}
+
+#course_list{
+    @apply relative;
+}
+
+#course_list .owl-next{
+    @apply absolute text-3xl top-[4rem] -right-5 bg-black text-white w-10 h-10 rounded-full;
+}
+
+#course_list .owl-prev{
+    @apply absolute text-3xl top-[4rem] -left-5 bg-black text-white w-10 h-10 rounded-full;
+}
+
+#shorCourses{
+    @apply relative;
+}
+
+#shorCourses .owl-next{
+    @apply absolute text-3xl top-[4rem] -right-5 bg-black text-white w-10 h-10 rounded-full;
+}
+
+#shorCourses .owl-prev{
+    @apply absolute text-3xl top-[4rem] -left-5 bg-black text-white w-10 h-10 rounded-full;
+}
+
+#webDevelopment{
+    @apply relative;
+}
+
+#webDevelopment .owl-next{
+    @apply absolute text-3xl top-[4rem] -right-5 bg-black text-white w-10 h-10 rounded-full;
+}
+
+#webDevelopment .owl-prev{
+    @apply absolute text-3xl top-[4rem] -left-5 bg-black text-white w-10 h-10 rounded-full;
+}
