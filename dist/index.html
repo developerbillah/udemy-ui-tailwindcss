@@ -13,8 +13,8 @@
     <title>Online Courses - Learn Anything, On Your Schedule | Udemy</title>
 </head>
 <body class="font-DMSans">
-    <!-- Header  -->
-    <header class="border-b-2">
+    <!-- Header Desktop -->
+    <header class="border-b-2 hidden lg:block">
         <div class="flex items-center justify-between mx-4 py-4 space-x-5 ">
             <!-- Logo  -->
             <a href="">
@@ -55,43 +55,65 @@
             </a>
         </div>
     </header>
-    <!-- Header End -->
+    <!-- Header Desktop End -->
+
+    <!-- Header Mobile -->
+    <header class="shadow-md lg:hidden px-5 py-3">
+        <div class="flex justify-between items-center">
+            <!-- Menu -->
+            <a href="">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+            
+            <!-- Logo -->
+            <a href="">
+                <img src="./assets/img/logo.png" alt="" class="h-10">
+            </a>
+
+            <div class="flex justify-between items-center space-x-3">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <span><i class="fa-solid fa-cart-shopping"></i></span>
+            </div>
+        </div>
+    </header>
+    <!-- Header Mobile End -->
 
     <!-- Navigation -->
-    <nav class="flex justify-center space-x-5 py-4 shadow-md">
-        <a href="" class="hover:text-purple-700 transition-all">Development</a>
-        <a href="" class="hover:text-purple-700 transition-all">Business</a>
-        <a href="" class="hover:text-purple-700 transition-all">Finance & Accounting</a>
-        <a href="" class="hover:text-purple-700 transition-all">IT & Software</a>
-        <a href="" class="hover:text-purple-700 transition-all">Office Productivity</a>
-        <a href="" class="hover:text-purple-700 transition-all">Personal Development</a>
-        <a href="" class="hover:text-purple-700 transition-all">Design</a>
-        <a href="" class="hover:text-purple-700 transition-all">Marketing</a>
-        <a href="" class="hover:text-purple-700 transition-all">Health & Fitness</a>
-    </nav>
+    <div class="hidden lg:block">
+        <nav class="flex justify-center space-x-3 lg:space-x-5 py-4 shadow-md">
+            <a href="" class="hover:text-purple-700 transition-all">Development</a>
+            <a href="" class="hover:text-purple-700 transition-all">Business</a>
+            <a href="" class="hover:text-purple-700 transition-all">Finance & Accounting</a>
+            <a href="" class="hover:text-purple-700 transition-all">IT & Software</a>
+            <a href="" class="hover:text-purple-700 transition-all">Office Productivity</a>
+            <a href="" class="hover:text-purple-700 transition-all">Personal Development</a>
+            <a href="" class="hover:text-purple-700 transition-all">Design</a>
+            <a href="" class="hover:text-purple-700 transition-all">Marketing</a>
+            <a href="" class="hover:text-purple-700 transition-all">Health & Fitness</a>
+        </nav>
+    </div>
     <!-- Navigation End -->
 
     <!-- Banner -->
-    <section>
+    <section class="">
         <!-- Container -->
         <div class="container mx-auto relative">
             <img src="./assets/img/banner.jpg" alt="">
-            <div class="bg-white p-6 absolute top-14 left-14  max-w-[27rem]">
-                <h1 class="text-4xl font-DMSerif">Find your fit</h1>
-                <p>Many courses offer free previews so you can check out the content and teaching style. Take a look.</p>
+            <div class="bg-white p-6 absolute md:top-14 md:left-14  max-w-[27rem]">
+                <h1 class="text-lg md:text-4xl lg:text-4xl font-DMSerif">Find your fit</h1>
+                <p class="text-xs md:text-lg lg:text-lg md:mt-3 lg:mt-3">Many courses offer free previews so you can check out the content and teaching style. Take a look.</p>
             </div>
         </div>
     </section>
     <!-- Banner End -->
 
     <!-- Student Viewing -->
-    <section>
+    <section class="mx-5 lg:mx-0">
         <!-- Container -->
-        <div class="container mx-auto mt-16">
+        <div class="container mx-auto mt-24 md:mt-16 lg:mt-16">
             <div class="heading mb-3">
-                <h2 class="text-3xl font-bold">Students are viewing</h2>
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-bold">Students are viewing</h2>
             </div>
-
             <div class="owl-carousel owl-theme" id="course_list">
                 <!-- Single Course 01 -->
                 <div class="single_course max-h-96">
@@ -302,32 +324,32 @@
     <!-- Student Viewing End -->
 
     <!-- Topic Recomended -->
-    <section>
+    <section class="mx-5 lg:mx-0">
         <!-- Container -->
-        <div class="container mx-auto mt-16">
+        <div class="container mx-auto mt-3 md:mt-16 lg:mt-16">
             <div class="heading my-4">
-                <h2 class="text-3xl font-bold">Topics recommended for you</h2>
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-bold">Topics recommended for you</h2>
             </div>
-            <div class="grid grid-cols-4 gap-3">
-                <button class="px-3 py-3 border text-xl font-bold hover:bg-gray-100">Tailwind CSS</button>
-                <button class="px-3 py-3 border text-xl font-bold hover:bg-gray-100">Alpine.js</button>
-                <button class="px-3 py-3 border text-xl font-bold hover:bg-gray-100">CSS Grid</button>
-                <button class="px-3 py-3 border text-xl font-bold hover:bg-gray-100">CSS Flexbox</button>
-                <button class="px-3 py-3 border text-xl font-bold hover:bg-gray-100">WordPress Plugins</button>
-                <button class="px-3 py-3 border text-xl font-bold hover:bg-gray-100">WordPress Themes</button>
-                <button class="px-3 py-3 border text-xl font-bold hover:bg-gray-100">WordPress</button>
-                <button class="px-3 py-3 border text-xl font-bold hover:bg-gray-100">WordPress for Ecommerce</button>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3">
+                <button class="topics">Tailwind CSS</button>
+                <button class="topics">Alpine.js</button>
+                <button class="topics">CSS Grid</button>
+                <button class="topics">CSS Flexbox</button>
+                <button class="topics">WordPress Plugins</button>
+                <button class="topics">WordPress Themes</button>
+                <button class="topics">WordPress</button>
+                <button class="topics">WordPress for Ecommerce</button>
             </div>
         </div>
     </section>
     <!-- Topic Recomended End -->
 
     <!-- Short Viewing -->
-    <section>
+    <section class="mx-5 lg:mx-0">
         <!-- Container -->
-        <div class="container mx-auto mt-16">
+        <div class="container mx-auto mt-3 md:mt-16 lg:mt-16">
             <div class="heading mb-3">
-                <h2 class="text-3xl font-bold">Short and sweet courses for you</h2>
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-bold">Short and sweet courses for you</h2>
             </div>
 
             <div class="owl-carousel owl-theme" id="shorCourses">
@@ -525,12 +547,12 @@
     </section>
     <!-- Short Course End -->
 
-      <!-- Short Viewing -->
-      <section>
+    <!-- Short Viewing -->
+    <section class="mx-5 lg:mx-0">
         <!-- Container -->
-        <div class="container mx-auto mt-16">
+        <div class="container mx-auto mt-3 md:mt-16 lg:mt-16">
             <div class="heading mb-3">
-                <h2 class="text-3xl font-bold">New and noteworthy in <a href="" class="text-purple-900">Web Development</a></h2>
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-bold">New and noteworthy in <a href="" class="text-purple-900">Web Development</a></h2>
             </div>
 
             <div class="owl-carousel owl-theme" id="webDevelopment">
@@ -758,7 +780,7 @@
             dots: false,
             responsive:{
                 0:{
-                    items:1
+                    items:1,
                 },
                 600:{
                     items:3
@@ -774,6 +796,17 @@
             nav:true,
             items: 5,
             dots: false,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
         });
 
         $('#webDevelopment').owlCarousel({
@@ -782,6 +815,17 @@
             nav:true,
             items: 5,
             dots: false,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
         });
     });
         

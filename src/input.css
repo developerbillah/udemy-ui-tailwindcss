@@ -43,3 +43,7 @@
 #webDevelopment .owl-prev{
     @apply absolute text-3xl top-[4rem] -left-5 bg-black text-white w-10 h-10 rounded-full;
 }
+
+.topics{
+    @apply px-1 md:px-3 lg:px-3 py-1 md:py-3 lg:py-3 border text-xs md:text-lg font-bold hover:bg-gray-100;
+}
