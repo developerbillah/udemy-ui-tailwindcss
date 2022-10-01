@@ -61,9 +61,9 @@
     <header class="shadow-md lg:hidden px-5 py-3">
         <div class="flex justify-between items-center">
             <!-- Menu -->
-            <a href="">
+            <button id="openNav">
                 <i class="fa-solid fa-bars"></i>
-            </a>
+            </button>
             
             <!-- Logo -->
             <a href="">
@@ -73,6 +73,52 @@
             <div class="flex justify-between items-center space-x-3">
                 <span><i class="fa-solid fa-magnifying-glass"></i></span>
                 <span><i class="fa-solid fa-cart-shopping"></i></span>
+            </div>
+        </div>
+
+        <div id="mobileSideNav" class="fixed top-0 h-full w-64 -left-64 bg-white shadow-sm z-10 transition-all delay-75">
+            
+            <div class="navArea w-64">
+                <div class="navHeader flex items-center space-x-3 bg-gray-100 p-2 relative">
+                    <a href="" class="relative">
+                        <div class="avatar h-10 w-10 rounded-full bg-gray-900 text-white flex items-center justify-center">MB</div>
+                        <span class="absolute w-3 h-3 rounded-full bg-purple-600 top-0 -right-1"></span>
+                    </a>
+                    <div>
+                        <h3 class="text-lg font-bold">Hi, Masum Billah</h3>
+                        <p class="text-xs text-gray-600">Welcome back</p>
+                    </div>
+                    <button class="absolute top-5 right-3 w-6 h-6 leading-3 rounded-full bg-white text-purple-800" id="closeNav">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="mt-5">
+                   <a href="" class="flex justify-between items-center px-4 py-2 hover:bg-gray-100 border-b-[0.1rem] border-dotted">
+                    <span>Web Development</span>
+                    <span class="text-xs"><i class="fa-solid fa-chevron-right"></i></span>
+                   </a>
+
+                   <a href="" class="flex justify-between items-center px-4 py-2 hover:bg-gray-100 border-b-[0.1rem] border-dotted">
+                    <span>Mobile App Development</span>
+                    <span class="text-xs"><i class="fa-solid fa-chevron-right"></i></span>
+                   </a>
+
+                   <a href="" class="flex justify-between items-center px-4 py-2 hover:bg-gray-100 border-b-[0.1rem] border-dotted">
+                    <span>Game Development</span>
+                    <span class="text-xs"><i class="fa-solid fa-chevron-right"></i></span>
+                   </a>
+
+                   <a href="" class="flex justify-between items-center px-4 py-2 hover:bg-gray-100 border-b-[0.1rem] border-dotted">
+                    <span>Digital Marketing</span>
+                    <span class="text-xs"><i class="fa-solid fa-chevron-right"></i></span>
+                   </a>
+
+                   <a href="" class="flex justify-between items-center px-4 py-2 hover:bg-gray-100 border-b-[0.1rem] border-dotted">
+                    <span>Personal Development</span>
+                    <span class="text-xs"><i class="fa-solid fa-chevron-right"></i></span>
+                   </a>
+                   
+                </div>
             </div>
         </div>
     </header>
@@ -827,6 +873,19 @@
                 }
             }
         });
+
+        const mobileSideNav = document.getElementById('mobileSideNav');
+        const openNav = document.getElementById('openNav');
+        const closeNav = document.getElementById('closeNav');
+
+        openNav.addEventListener('click', function(){
+            mobileSideNav.style.left = '0px';
+        });
+
+        closeNav.addEventListener('click', function(){
+            mobileSideNav.style.left = '-256px';
+        });
+
     });
         
     </script>
